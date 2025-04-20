@@ -114,6 +114,3 @@ If you're learning too and want to contribute, feel free to open issues or submi
 
 ---
 
-## 📄 License
-
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
