@@ -32,7 +32,6 @@ You’ll learn:
 -   🔍 Search Blogs by Author or Title
 -   🧹 Form Validation and Flash Messages
 
-![Image](https://github.com/user-attachments/assets/f00d1907-1445-40a0-95a5-3388dba58b93)
 
 ---
 
@@ -94,7 +93,7 @@ Password: password
 
 ## 📸 Screenshots
 
-(Add a few screenshots of the homepage, login form, blog listing, create blog form, etc.)
+![Image](https://github.com/user-attachments/assets/f00d1907-1445-40a0-95a5-3388dba58b93)
 
 ---
 
