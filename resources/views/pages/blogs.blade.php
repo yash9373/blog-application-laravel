@@ -16,6 +16,8 @@
                         <p class="card-text flex-grow-1">{{ str::limit($blog->description, 100, '...')  }}</p>
                         <div class="d-flex justify-content-between">
                             <a href="{{ url('/blogPage/' . $blog->id) }}" class="btn btn-primary">View</a>
+                            <p>{{ $blog->comments->count() }} Comments</p>
+
                         </div>
                     </div>
                 </div>

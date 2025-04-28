@@ -30,7 +30,7 @@ class userController extends Controller
             return redirect()->intended('/');
         }
 
-        return back()->withErrors(['email' => 'Invalid login credentials.']);
+        return back()->withErrors(['email' => 'wrong credentials']);
     }
     public function register(request $request)
     {

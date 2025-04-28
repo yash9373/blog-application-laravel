@@ -25,4 +25,6 @@
             </div>
         </div>
     </div>
+    
+    @include('pages.comment', ['blog' => $blog]);
 @endsection
