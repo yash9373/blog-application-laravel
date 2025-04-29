@@ -9,6 +9,23 @@
         @endif
 
         <h4 class="card-title mb-5">Explore the blogs</h4>
+        <form class="mb-4" action="{{ route('filterBlogsByCategory', ['category' => request()->input('category_id')]) }}"
+            method="GET">
+            <div class="row">
+                <div class="col-md-6">
+                    <select name="category_id" class="form-control" onchange="this.form.submit()">
+                        <option value=""> Select Category </option>
+                        @foreach($categories as $category)
+                            <option value="{{ $category->id }}">
+                                {{ $category->category_name }}
+                            </option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+        </form>
+
+
         @include('pages.blogs', ['blogs' => $blogs])
     </div>
-@endsection()
+@endsection

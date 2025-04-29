@@ -1,9 +1,11 @@
 <?php
 
 use App\Http\Controllers\blogControler;
+use App\Http\Controllers\Categorycontroller;
 use App\Http\Controllers\ComentController;
 use App\Http\Controllers\userController;
 use App\Models\blog;
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -38,7 +40,8 @@ Route::get('/blogPage/{id}', function ($id) {
 Route::get('/deleteBlog/{id}', [blogControler::class, 'deleteBlog'])->middleware('auth');
 Route::get('/searchBlog', action: [blogControler::class, 'searchBlog'])->name('searchBlog')->middleware('auth');
 Route::get('/addBlog', function () {
-    return view('pages.addBlog');
+    $categories = Category::all();
+    return view('pages.addBlog', compact('categories'));
 })->middleware('auth');
 route::post('/addBlog', [blogControler::class, 'addBlog'])->name('addBlog');
 
@@ -54,3 +57,6 @@ Route::post('/comments', [ComentController::class, 'store'])->name('comments.sto
 Route::get('/comments/{id}', [ComentController::class, 'destroy']);
 Route::get('/comments/edit/{id}', [ComentController::class, 'edit']);
 Route::post('/comments/update/{id}', [ComentController::class, 'update']);
+
+
+Route::get('/filterBlogsByCategory', [blogControler::class, 'filterBlogsByCategory'])->name('filterBlogsByCategory')->middleware('auth');
